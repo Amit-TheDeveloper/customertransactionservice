@@ -5,7 +5,7 @@
 This project is a SpringBoot application which exposes REST endpoints to enable various operations to facilitate transactions on a Customer Account.
 The project is organized as a maven project with pom.xml in root directory. You must build the resource using your IDE or maven from the command line prior to starting the applications to prevent startup issues.
 
-You can build the project from the commandline by navigating to the root directory and invoking mvn -U clean install
+You can build the project from the commandline by navigating to the root directory and invoking mvn -U clean install -DskipTests
 
 1) Supported Api's: Header used: Content-Type: application/json
 
@@ -73,7 +73,9 @@ Go to file CustomerTransactionServiceApplicationTests and run as Java Applicatio
 
 3.2) Viewing records from browser(H2-console):
 As the application uses in-memory data base H2. Data can be viewd from H2 browser console.
-Open browser and go to url [http://localhost:9091/h2-console/login.jsp] and click connect.
+1) Open browser and go to url [http://localhost:9091/h2-console/login.jsp]
+2) Use JDBC URL: jdbc:h2:mem:customertransactiondb
+3) Click connect.
 Tables available are CUSTOMERS, ACCOUNTS and TRANSACTIONS for respective activities.
 
 3.3) GET api's can be hit from browser to get the results.
